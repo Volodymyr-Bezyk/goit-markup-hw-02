@@ -102,10 +102,15 @@ body {
 .footer {
   background-color: #2f303a;
 }
+.footer > .header-logo {
+  color: var(--basic-bgc-color);
+}
 .adress {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.714;
+
+  font-style: normal;
 
   color: var(--basic-bgc-color);
 }
