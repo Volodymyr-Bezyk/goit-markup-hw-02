@@ -1,0 +1,96 @@
+/* Основний колір тексту #757575 
+Колір заголовків #212121
+Колір заголовку Н1  #FFFFFF
+Колір адреса в футері rgba(255, 255, 255, 0.6);
+
+Шрифти 
+
+Основний Roboto  Weight 400, Regular
+Підписи заголовків Н3 Roboto  Weight 500, Medium
+Заголовки: Roboto Weight 700, Bold
+Заголовок Н1 Roboto Weight 900, Black
+
+
+Основний колір обгортки #F5F4FA
+Основний колір фону #FFFFFF
+
+Головний акцентний колір #2196F3 */
+:root {
+  --basic-text-color: #757575;
+  --basic-bgc-color: #ffffff;
+  --link-color: #212121;
+  --main-accent-color: #2196f3;
+  --footer-link-color: rgba(255, 255, 255, 0.6);
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--basic-text-color);
+  background-color: var(--basic-bgc-color);
+}
+
+/* header styles start */
+.accent-logo {
+  color: var(--main-accent-color);
+}
+.header-logo {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.192;
+  color: #000;
+
+  text-decoration: none;
+}
+.list {
+  list-style: none;
+}
+
+.header-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.143;
+  color: var(--link-color);
+
+  text-decoration: none;
+}
+.header-link:hover,
+.header-link:focus {
+  color: var(--main-accent-color);
+}
+.current-link {
+  color: var(--main-accent-color);
+}
+.auth-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.143;
+  color: var(--basic-text-color);
+
+  text-decoration: none;
+}
+.auth-link:hover,
+.auth-link:focus {
+  color: var(--main-accent-color);
+}
+/* header styles end */
+
+/* footer styles start */
+.footer {
+  background-color: #2f303a;
+}
+.adress {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+
+  color: var(--basic-bgc-color);
+}
+.footer-link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714px;
+
+  color: var(--footer-link-color);
+}
+/* footer styles end */
