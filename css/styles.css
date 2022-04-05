@@ -1,20 +1,20 @@
-/* Основний колір тексту #757575 
+/* 
+Основний колір тексту #757575 
 Колір заголовків #212121
 Колір заголовку Н1  #FFFFFF
 Колір адреса в футері rgba(255, 255, 255, 0.6);
 
 Шрифти 
-
 Основний Roboto  Weight 400, Regular
 Підписи заголовків Н3 Roboto  Weight 500, Medium
 Заголовки: Roboto Weight 700, Bold
 Заголовок Н1 Roboto Weight 900, Black
 
-
 Основний колір обгортки #F5F4FA
 Основний колір фону #FFFFFF
+Головний акцентний колір #2196F3 
+*/
 
-Головний акцентний колір #2196F3 */
 :root {
   --basic-text-color: #757575;
   --basic-bgc-color: #ffffff;
@@ -68,12 +68,35 @@ body {
   color: var(--basic-text-color);
 
   text-decoration: none;
+  display: block;
 }
 .auth-link:hover,
 .auth-link:focus {
   color: var(--main-accent-color);
 }
 /* header styles end */
+
+/* Main index styles start */
+.hero {
+  background-color: #2f303a;
+}
+.hero-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.364;
+
+  color: var(--basic-bgc-color);
+}
+
+.hero-button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+
+  color: var(--basic-bgc-color);
+  background-color: var(--main-accent-color);
+}
+/* Main index styles end */
 
 /* footer styles start */
 .footer {
