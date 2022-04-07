@@ -87,7 +87,9 @@ body {
   color: var(--text-color);
 }
 .auth-link:hover,
-.auth-link:focus {
+.auth-link:focus,
+.footer-link:hover,
+.footer-link:focus {
   color: var(--hover-color);
 }
 
