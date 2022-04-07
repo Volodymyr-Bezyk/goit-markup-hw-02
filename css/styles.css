@@ -1,32 +1,26 @@
-/* 
-Основний колір тексту #757575 
-Колір заголовків #212121
-Колір заголовку Н1  #FFFFFF
-Колір адреса в футері rgba(255, 255, 255, 0.6);
-
-Шрифти 
-Основний Roboto  Weight 400, Regular
-Підписи заголовків Н3 Roboto  Weight 500, Medium
-Заголовки Н2: Roboto Weight 700, Bold
-Заголовок Н1 Roboto Weight 900, Black
-
-Основний колір обгортки #F5F4FA
-Основний колір фону #FFFFFF
-Головний акцентний колір #2196F3 
-*/
-
 :root {
-  --basic-text-color: #757575;
-  --basic-bgc-color: #ffffff;
-  --wrapper-bgc-color: #f5f4fa;
-  --title-color: #212121;
-  --main-accent-color: #2196f3;
-  --footer-link-color: rgba(255, 255, 255, 0.6);
+  --primary-bgc: #ffffff;
+  --secondary-bgc: #f5f4fa;
+  --accent-bgc: #2f303a;
+
+  --text-color: #757575;
+  --primary-title-color: #212121;
+  --secondary-title-color: #ffffff;
+  --footer-links-color: rgba(255, 255, 255, 0.6);
+  --accent-color: #2196f3;
+  --hover-color: #2196f3;
+
+  --primary-btn-bgc-color: #f5f4fa;
+  --secondary-btn-bgc-color: #2196f3;
+  --primary-btn-text-color: #212121;
+  --secondary-btn-text-color: #ffffff;
 }
 
+/*---------------------- BASIC STYLES ------------------------- */
+
 body {
-  color: var(--basic-text-color);
-  background-color: var(--basic-bgc-color);
+  color: var(--text-color);
+  background-color: var(--primary-bgc);
 
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -35,95 +29,111 @@ body {
   letter-spacing: 0.03em;
 }
 
-/* basic styles */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 .list {
   list-style: none;
 }
+.nav-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+.btn {
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
 
-/* header styles start */
+/*---------------------- HEADER STYLES START------------------------- */
+
 .accent-logo {
-  color: var(--main-accent-color);
+  color: var(--accent-color);
 }
 .header-logo {
   color: #000;
 
   font-family: 'Raleway';
-  font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
 }
 .header-link {
-  color: var(--title-color);
-
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
+  color: var(--primary-title-color);
 }
 .current-link {
-  color: var(--main-accent-color);
+  color: var(--accent-color);
 }
 .header-link:hover,
 .header-link:focus {
-  color: var(--main-accent-color);
+  color: var(--hover-color);
 }
 .auth-link {
-  color: var(--basic-text-color);
-
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
+  color: var(--text-color);
 }
 .auth-link:hover,
 .auth-link:focus {
-  color: var(--main-accent-color);
+  color: var(--hover-color);
 }
-/* header styles end */
 
-/* Main index styles start */
+/*---------------------- HEADER STYLES END------------------------- */
+
+/*---------------------- INDEX STYLES START------------------------- */
+
 .hero {
-  background-color: #2f303a;
+  background-color: var(--accent-bgc);
 }
 .hero-title {
-  color: var(--basic-bgc-color);
+  color: var(--secondary-title-color);
 
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
+  text-transform: uppercase;
   text-align: center;
 }
 .hero-button {
-  color: var(--basic-bgc-color);
-  background-color: var(--main-accent-color);
+  color: var(--secondary-btn-text-color);
+  background-color: var(--secondary-btn-bgc-color);
 
   font-weight: 700;
-  font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
 }
 
-.section-title {
-  color: var(--title-color);
+.features-subtitle {
+  color: var(--primary-title-color);
 
-  font-weight: 700;
+  line-height: 1.14;
+}
+.section-title {
+  color: var(--primary-title-color);
+
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
 }
-.features-subtitle {
-  color: var(--title-color);
-
-  font-weight: 700;
-  line-height: 1.14;
+.team {
+  background-color: var(--secondary-bgc);
 }
 .team-subtitle {
-  color: var(--title-color);
+  color: var(--primary-title-color);
 
   font-weight: 500;
   font-size: 16px;
@@ -133,55 +143,57 @@ body {
   font-size: 16px;
   line-height: 1.19;
 }
-/* Main index styles end */
 
-/* Main portfolio styles start */
+/*---------------------- INDEX STYLES END------------------------- */
+
+/*---------------------- PORTFOLIO STYLES START------------------------- */
+
 .works-button {
-  color: var(--title-color);
-  background-color: var(--wrapper-bgc-color);
+  color: var(--primary-btn-text-color);
+  background-color: var(--primary-btn-bgc-color);
 
-  cursor: pointer;
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 500;
-  font-size: 16px;
   line-height: 1.63;
   letter-spacing: 0.03em;
-  border-radius: 4px;
 }
 .works-button:hover,
 .works-button:focus {
-  color: var(--basic-bgc-color);
-  background-color: var(--main-accent-color);
+  color: var(--secondary-btn-text-color);
+  background-color: var(--secondary-btn-bgc-color);
+}
+.examples-link {
+  text-decoration: none;
 }
 .works-subtitle {
-  color: var(--title-color);
+  color: var(--primary-title-color);
 
-  font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
 .works-text {
+  color: var(--text-color);
+
   font-size: 16px;
   line-height: 1.88;
 }
 
-/* Main portfolio styles end */
+/*---------------------- PORTFOLIO STYLES END------------------------- */
 
-/* footer styles start */
+/*---------------------- FOOTER STYLES ---------------------------- */
+
 .footer {
-  background-color: #2f303a;
+  background-color: var(--accent-bgc);
 }
 .footer > .header-logo {
-  color: var(--basic-bgc-color);
+  color: #ffffff;
 }
 .adress {
-  color: var(--basic-bgc-color);
+  color: #ffffff;
 
   font-style: normal;
 }
 .footer-link {
-  color: var(--footer-link-color);
+  color: var(--footer-links-color);
+  text-decoration: none;
 }
-/* footer styles end */
